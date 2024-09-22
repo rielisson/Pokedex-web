@@ -1,0 +1,31 @@
+.menu-cards {
+  background-color: #dc0a2d;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  height: 100%;
+  width: 100%;
+  padding-left: 2.5%;
+}
+.cards {
+  background-color: ghostwhite;
+  width: 200px;
+  height: 230px;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.cards:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cards img {
+  width: 150px;
+}
+.nome-pokemon {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 500;
+}

@@ -1,0 +1,7 @@
+<div class="menu-cards" *ngIf="pokemons">
+  <div class="cards" *ngFor="let pokemon of pokemons">
+    <p>{{ pokemon.id }}</p>
+    <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}">
+    <p class="nome-pokemon">{{ pokemon.name }}</p>
+  </div>
+</div>
