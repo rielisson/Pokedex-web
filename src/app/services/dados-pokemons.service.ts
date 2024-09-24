@@ -9,16 +9,23 @@ export class DadosPokemonsService {
   private apiUrl = 'https://pokeapi.co/api/v2/';
   constructor(private https: HttpClient) { }
 
-  getPokemons(limit: number = 50, offset: number = 0): Observable<PokemonInterface> {
+  getPokemons(limit: number, offset: number): Observable<PokemonInterface> {
     return this.https.get<PokemonInterface>(`${this.apiUrl}pokemon?limit=${limit}&offset=${offset}`);
   }
   getDadosPokemon(name: any) {
     return this.https.get(`${this.apiUrl}pokemon/${name}`)
   }
+  getCorPokemons(name: string): Observable<PokemonInterface> {
+    return this.https.get<PokemonInterface>(`${this.apiUrl}pokemon-species/${name}`);
+  }
 }
 interface PokemonInterface {
+  name: any;
   count: number;
   next: string;
   previous: string;
-  results: Array<{name: string,url: string }>
+  results: Array<{name: string,url: string }>;
+  color: {
+    name: string;
+  };
 }

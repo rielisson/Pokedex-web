@@ -29,3 +29,96 @@
   text-align: center;
   font-weight: 500;
 }
+ngb-pagination {
+  display: flex;
+  justify-content: center;
+  color: #000;
+}
+.page-link {
+  color: #000;
+}
+
+/* Modal Custom Styles */
+.pokemon-modal {
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+}
+.btn-close {
+
+}
+.pokemon-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  position: relative;
+}
+
+.pokemon-img {
+  width: 200px;
+  height: 200px;
+}
+
+.pokemon-info {
+  margin-left: 20px;
+  color: white;
+}
+
+.pokemon-id {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.pokemon-types {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pokemon-type {
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.pokemon-details {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
+  padding: 10px;
+}
+
+.pokemon-attributes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin: 10px;
+  font-weight: 500;
+}
+
+.pokemon-description {
+  font-size: 16px;
+  color: #555;
+}
+
+.pokemon-stats {
+  margin-top: 30px;
+}
+
+.stat-bar {
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  height: 100%;
+}

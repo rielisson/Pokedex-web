@@ -3,6 +3,7 @@
   width: 100%;
   height: 100px;
   display: flex;
+
 }
 .icone-pokebola {
   width: 50px;
@@ -99,6 +100,7 @@
 @media (max-width: 768px) {
   .menu-navbar{
     height: 140px;
+    border: none;
   }
   .menu-lista {
       display: none;
