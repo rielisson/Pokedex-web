@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DadosPokemonsService } from '../../services/dados-pokemons.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { SharedDadosService } from '../../services/shared-dados.service';
 
 @Component({
   selector: 'app-menu',
@@ -15,13 +16,18 @@ export class MenuComponent implements OnInit{
   pokemonModal: any = null;
   corPokemon: any;
   testeCor: any;
+  inputValue: any;
+  pokemonPesquisa: any;
+
   constructor (
     private dadosPokemons: DadosPokemonsService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private sharedDado: SharedDadosService
   ) {}
 
   ngOnInit(): void {
     this.getPokemons();
+    this.getInputValue();
   }
 
   getPokemons(): void {
@@ -50,6 +56,25 @@ export class MenuComponent implements OnInit{
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
   }
 
+  getInputValue() {
+    this.sharedDado.data$.subscribe((newData) => {
+      console.log(newData);
+      this.inputValue = newData;
+      this.filterPokemons();
+    })
+  }
 
+  filterPokemons() {
+    if (!this.inputValue) {
+      this.pokemonPesquisa = this.pokemons;
+      console.log(this.pokemons);
+      return;
+    }
+
+    this.pokemonPesquisa = this.pokemons.filter(pokemon =>
+      pokemon.name.toLowerCase().includes(this.inputValue.toLowerCase())
+    );
+
+  }
 }
 

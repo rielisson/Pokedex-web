@@ -9,9 +9,10 @@
     <li>SAIBA MAIS</li>
   </ul>
 
-  <input type="text" alt="pesquisa" class="input-pesquisa">
+  <input [(ngModel)]="inputValue" type="text" alt="pesquisa" class="input-pesquisa" placeholder="digite o nome ou id do pokemon que desejar...">
 
-  <img src="../../../assets/imgs/lupa.png" alt="icone de pesquisa" class="icone-pesquisa">
+  <button class="button_pesquisa" (click)="getInput()">pesquisa</button>
+
   <img src="../../../assets/imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="icone de menu" class="icone-menu" id="btn-menu">
 
   <div class="div-menu-lateral" id="div-menu-lateral">

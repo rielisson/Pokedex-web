@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedDadosService } from '../../services/shared-dados.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-
-  constructor() {
+  inputValue: string = "";
+  constructor(private sharedDados: SharedDadosService) {
 
   }
    interacaoBarraLateral() {
@@ -19,5 +20,9 @@ export class NavbarComponent {
     bnt?.addEventListener('click', () => {
       menu?.classList.add('abrir-menu');
     })
+  }
+  getInput() {
+    this.sharedDados.setData(this.inputValue);
+
   }
 }
