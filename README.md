@@ -1,27 +1,38 @@
-# Pokedex
+# Pokédex Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+## Descrição
 
-## Development server
+Este é um sistema de Pokédex desenvolvido em Angular que utiliza a PokeAPI para buscar e exibir informações sobre Pokémon. A aplicação apresenta os Pokémon em cards interativos, onde os usuários podem visualizar detalhes através de um modal. Além disso, há um sistema de pesquisa que permite encontrar rapidamente o Pokémon desejado.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades
 
-## Code scaffolding
+- **Exibição de Pokémon**: Visualize uma lista de Pokémon em cards.
+- **Detalhes em Modal**: Clique em um card para abrir um modal com informações detalhadas sobre o Pokémon.
+- **Sistema de Pesquisa**: Pesquise Pokémon por nome para encontrá-los facilmente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologias Utilizadas
 
-## Build
+- Angular
+- PokeAPI
+- HTML/CSS
+- Bootstrap (ou outra biblioteca de estilos que você estiver usando)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalação
 
-## Running unit tests
+Para rodar este projeto localmente, siga os passos abaixo:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/SeuUsuario/pokedex.git
 
-## Running end-to-end tests
+2. Navegue até o diretório do projeto:
+  cd pokedex
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. instale as dependências:
+  npm install
 
-## Further help
+3. Execute a aplicação:
+  ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Acesse a aplicação no navegador:
+  http://localhost:4200/
