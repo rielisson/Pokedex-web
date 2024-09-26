@@ -15,7 +15,7 @@ Este é um sistema de Pokédex desenvolvido em Angular que utiliza a PokeAPI par
 - Angular
 - PokeAPI
 - HTML/CSS
-- Bootstrap (ou outra biblioteca de estilos que você estiver usando)
+- Bootstrap
 
 ## Instalação
 
