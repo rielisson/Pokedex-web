@@ -39,7 +39,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/Pokedex-Web/"
+            "baseHref": "/Pokedex-web/"
           },
           "configurations": {
             "production": {
