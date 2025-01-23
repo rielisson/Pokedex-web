@@ -164,52 +164,15 @@
     display: block;
     order: 2;
   }
-
-  .div-menu-lateral {
-    width: 70%;
-    transform: translateX(100%);
-  }
-
-  .div-menu-lateral.abrir-menu {
-    transform: translateX(0);
-  }
-
-  /* Modal Responsive */
-  .pokemon-modal {
-    width: 95%;
-    margin: 10px;
-  }
-
-  .pokemon-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .pokemon-attributes {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-bar {
-    margin: 5px 0;
-  }
 }
 
 @media (max-width: 480px) {
-  .menu-cards {
-    grid-template-columns: 1fr;
-    padding: 10px;
+  .menu-navbar {
+    display: flex;
   }
-
-  .cards {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .pokemon-modal {
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
+  .button_pesquisa {
+    align-self: center;
+    width: 250px;
   }
 }
 
