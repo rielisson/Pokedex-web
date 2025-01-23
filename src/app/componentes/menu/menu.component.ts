@@ -76,5 +76,11 @@ export class MenuComponent implements OnInit{
     );
 
   }
+  getDados() {
+    this.dadosPokemons.getApi().subscribe
+    (data => {
+      console.log(data);
+    })
+  }
 }
 

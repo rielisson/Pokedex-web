@@ -18,6 +18,9 @@ export class DadosPokemonsService {
   getCorPokemons(name: string): Observable<PokemonInterface> {
     return this.https.get<PokemonInterface>(`${this.apiUrl}pokemon-species/${name}`);
   }
+  getApi() {
+    return this.https.get('http://localhost:8080/crud');
+  }
 }
 interface PokemonInterface {
   name: any;
