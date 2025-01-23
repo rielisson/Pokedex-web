@@ -1,0 +1,28 @@
+<div class="menu-navbar">
+  <img src="../../../assets/imgs/pokebola.png" alt="icone de uma pokebola" class="icone-pokebola">
+
+  <h1 class="titulo-pokedex">Pokédex</h1>
+
+  <ul class="menu-lista">
+    <li>HOME</li>
+    <li>POKEMON</li>
+    <li>SAIBA MAIS</li>
+  </ul>
+
+  <input [(ngModel)]="inputValue" type="text" alt="pesquisa" class="input-pesquisa" placeholder="digite o nome do pokemon que desejar...">
+
+  <button class="button_pesquisa" (click)="getInput()">pesquisa</button>
+
+  <img src="../../../assets/imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="icone de menu" class="icone-menu" id="btn-menu">
+
+  <div class="div-menu-lateral" id="div-menu-lateral">
+    <img src="../../../assets/imgs/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" class="btn-fechar">
+
+    <ul class="menu-lateral" id="menu-lateral">
+        <li class="li-navbar">HOME</li>
+        <li class="li-navbar">POKEMONS</li>
+        <li class="li-navbar">MAIS</li>
+    </ul>
+    <div class="overlay-menu-lateral"></div>
+  </div>
+</div>
