@@ -7,6 +7,9 @@ import { SharedDadosService } from '../../services/shared-dados.service';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+toggleMenu() {
+throw new Error('Method not implemented.');
+}
 
   inputValue: string = "";
   constructor(private sharedDados: SharedDadosService) {

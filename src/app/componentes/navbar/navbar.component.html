@@ -1,16 +1,15 @@
 <div class="menu-navbar">
-  <img src="../../../assets/imgs/pokebola.png" alt="icone de uma pokebola" class="icone-pokebola">
-
+  <img src="../../../assets/imgs/pokebola.png" alt="Ícone de uma pokebola" class="icone-pokebola">
   <h1 class="titulo-pokedex">Pokédex</h1>
-
+  <!-- Menu de navegação -->
   <ul class="menu-lista">
     <li>HOME</li>
     <li>POKEMON</li>
     <li>SAIBA MAIS</li>
   </ul>
-
-  <input [(ngModel)]="inputValue" type="text" alt="pesquisa" class="input-pesquisa"
-    placeholder="digite o nome do pokemon que desejar...">
-
-  <button class="button_pesquisa" (click)="getInput()">pesquisa</button>
+  <!-- Input de pesquisa -->
+  <input [(ngModel)]="inputValue" type="text" alt="Pesquisa" class="input-pesquisa"
+    placeholder="Digite o nome do pokemon que desejar...">
+  <!-- Botão de pesquisa -->
+  <button class="button_pesquisa" (click)="getInput()">Pesquisar</button>
 </div>
