@@ -8,7 +8,7 @@ import { SharedDadosService } from '../../services/shared-dados.service';
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
-export class MenuComponent implements OnInit{
+export class MenuComponent implements OnInit {
   page: number = 1;
   pokemons: any[] = [];
   pageSize: number = 24;
@@ -19,11 +19,11 @@ export class MenuComponent implements OnInit{
   inputValue: any;
   pokemonPesquisa: any;
 
-  constructor (
+  constructor(
     private dadosPokemons: DadosPokemonsService,
     private modalService: NgbModal,
     private sharedDado: SharedDadosService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.getPokemons();
@@ -31,27 +31,27 @@ export class MenuComponent implements OnInit{
   }
 
   getPokemons(): void {
-    const offset = (this.page -1) * this.pageSize;
-    this.dadosPokemons.getPokemons(this.pageSize,offset).subscribe
-    (data => {
-      data.results.forEach((pokemons: any) => {
-        this.dadosPokemons.getDadosPokemon(pokemons.name).subscribe
-        (dadosPokemon => {
-          this.pokemons.push(dadosPokemon);
-        })
+    const offset = (this.page - 1) * this.pageSize;
+    this.dadosPokemons.getPokemons(this.pageSize, offset).subscribe
+      (data => {
+        data.results.forEach((pokemons: any) => {
+          this.dadosPokemons.getDadosPokemon(pokemons.name).subscribe
+            (dadosPokemon => {
+              this.pokemons.push(dadosPokemon);
+            })
+        });
       });
-    });
   }
-  onPageChange(page:number) {
+  onPageChange(page: number) {
     this.page = page;
     this.getPokemons();
   }
   openModal(content: any, pokemon: any) {
     this.dadosPokemons.getCorPokemons(pokemon.name).subscribe
-        (corPokemons => {
-          this.corPokemon = corPokemons.color.name;
-          console.log(this.corPokemon);
-        })
+      (corPokemons => {
+        this.corPokemon = corPokemons.color.name;
+        console.log(this.corPokemon);
+      })
     this.pokemonModal = pokemon
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
   }
@@ -78,9 +78,9 @@ export class MenuComponent implements OnInit{
   }
   getDados() {
     this.dadosPokemons.getApi().subscribe
-    (data => {
-      console.log(data);
-    })
+      (data => {
+        console.log(data);
+      })
   }
 }
 
